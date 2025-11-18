@@ -227,3 +227,4 @@ python examples/batch_inference.py path/to/image_directory/ --no-summary
 - 이미지 로드 실패 시 명확한 에러 메시지를 제공합니다.
 - 체크포인트 파일이 없으면 에러를 발생시킵니다.
 
+

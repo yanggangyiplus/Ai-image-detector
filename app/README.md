@@ -192,3 +192,4 @@ uvicorn app.api:app --port 8001
 - [FastAPI 문서](https://fastapi.tiangolo.com/)
 - 프로젝트 메인 README: `../README.md`
 
+

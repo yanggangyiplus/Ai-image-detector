@@ -1,0 +1,112 @@
+[
+  {
+    "image_path": "data/test/real/dataset_1_processed_1604_3.jpg",
+    "predicted_class": "Real",
+    "predicted_class_idx": 0,
+    "confidence": 0.9998905658721924,
+    "probabilities": {
+      "Real": 0.9998905658721924,
+      "AI": 0.0001093866812880151
+    },
+    "is_ai": false
+  },
+  {
+    "image_path": "data/test/real/dataset_1_processed_0652_9.jpg",
+    "predicted_class": "Real",
+    "predicted_class_idx": 0,
+    "confidence": 0.9990954399108887,
+    "probabilities": {
+      "Real": 0.9990954399108887,
+      "AI": 0.0009046105551533401
+    },
+    "is_ai": false
+  },
+  {
+    "image_path": "data/test/real/dataset_1_processed_0417_8_1.jpg",
+    "predicted_class": "Real",
+    "predicted_class_idx": 0,
+    "confidence": 0.9999874830245972,
+    "probabilities": {
+      "Real": 0.9999874830245972,
+      "AI": 1.2524047633633018e-05
+    },
+    "is_ai": false
+  },
+  {
+    "image_path": "data/test/real/dataset_1_processed_0706_4.jpg",
+    "predicted_class": "Real",
+    "predicted_class_idx": 0,
+    "confidence": 0.932949423789978,
+    "probabilities": {
+      "Real": 0.932949423789978,
+      "AI": 0.06705060601234436
+    },
+    "is_ai": false
+  },
+  {
+    "image_path": "data/test/real/dataset_1_processed_0463_10_1.jpg",
+    "predicted_class": "Real",
+    "predicted_class_idx": 0,
+    "confidence": 0.999907374382019,
+    "probabilities": {
+      "Real": 0.999907374382019,
+      "AI": 9.256330667994916e-05
+    },
+    "is_ai": false
+  },
+  {
+    "image_path": "data/test/fake/dataset_1_processed_517_9.jpg",
+    "predicted_class": "AI",
+    "predicted_class_idx": 1,
+    "confidence": 0.983556866645813,
+    "probabilities": {
+      "Real": 0.016443131491541862,
+      "AI": 0.983556866645813
+    },
+    "is_ai": true
+  },
+  {
+    "image_path": "data/test/fake/dataset_1_processed_894_4.jpg",
+    "predicted_class": "AI",
+    "predicted_class_idx": 1,
+    "confidence": 0.9325878620147705,
+    "probabilities": {
+      "Real": 0.06741217523813248,
+      "AI": 0.9325878620147705
+    },
+    "is_ai": true
+  },
+  {
+    "image_path": "data/test/fake/dataset_1_processed_985_9.jpg",
+    "predicted_class": "AI",
+    "predicted_class_idx": 1,
+    "confidence": 0.8877076506614685,
+    "probabilities": {
+      "Real": 0.1122923418879509,
+      "AI": 0.8877076506614685
+    },
+    "is_ai": true
+  },
+  {
+    "image_path": "data/test/fake/dataset_1_processed_40_7.jpg",
+    "predicted_class": "AI",
+    "predicted_class_idx": 1,
+    "confidence": 0.9996610879898071,
+    "probabilities": {
+      "Real": 0.000338973302859813,
+      "AI": 0.9996610879898071
+    },
+    "is_ai": true
+  },
+  {
+    "image_path": "data/test/fake/dataset_1_processed_915_5.jpg",
+    "predicted_class": "AI",
+    "predicted_class_idx": 1,
+    "confidence": 0.9986180067062378,
+    "probabilities": {
+      "Real": 0.0013819929445162416,
+      "AI": 0.9986180067062378
+    },
+    "is_ai": true
+  }
+]

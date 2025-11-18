@@ -1,4 +1,4 @@
-# 🖼️ AI Image Detector
+# AI Image Detector
 
 딥러닝 기반 AI 생성 이미지 탐지 시스템
 
@@ -654,7 +654,7 @@ Ai-image-detector/
 
 ---
 
-## 📚 상세 문서
+## 상세 문서
 
 ### 핵심 문서
 - [실험 보고서](experiments/reports/experiment_report.md) - 상세한 실험 분석 및 결과 해석
