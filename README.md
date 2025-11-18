@@ -9,9 +9,9 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 📋 목차
+## 목차
 
-- [🔥 TL;DR](#-tldr)
+- [TL;DR](#-tldr)
 - [프로젝트 개요](#-프로젝트-개요)
 - [시스템 아키텍처](#-시스템-아키텍처)
 - [모델 & 실험 요약](#-모델--실험-요약)
@@ -26,29 +26,29 @@
 
 ---
 
-## 🔥 TL;DR
+## TL;DR
 
 **핵심 요약**:
-- ✅ **ViT가 CNN 대비 Accuracy +0.7%p / AI F1 +2.2%p 개선**
-- ✅ **실시간 서비스는 CNN-FP16 (12ms) 권장**
-- ✅ **정확도 기반 배치 추론은 ViT 권장**
-- ✅ **70,190장 데이터 전처리 + EDA + Ablation + 배포까지 End-to-End 수행**
-- ✅ **HuggingFace Spaces 실시간 추론 제공**
-- ✅ **전체 아키텍처 직접 설계 및 개발**
+- **ViT가 CNN 대비 Accuracy +0.7%p / AI F1 +2.2%p 개선**
+- **실시간 서비스는 CNN-FP16 (12ms) 권장**
+- **정확도 기반 배치 추론은 ViT 권장**
+- **70,190장 데이터 전처리 + EDA + Ablation + 배포까지 End-to-End 수행**
+- **HuggingFace Spaces 실시간 추론 제공**
+- **전체 아키텍처 직접 설계 및 개발**
 
 ---
 
-## 🎯 프로젝트 개요
+## 프로젝트 개요
 
 ### 목적
 AI 생성 이미지와 실제 이미지를 구분하는 이진 분류 태스크에서 **CNN(ResNet18)**과 **Vision Transformer(ViT-Base)** 모델의 성능을 비교하고, 각 모델의 장단점을 분석하여 최적의 모델을 선정합니다.
 
 ### 주요 특징
-- ✅ **두 가지 딥러닝 아키텍처 비교**: CNN vs Vision Transformer
-- ✅ **고성능 모델**: Test Accuracy 97% 이상 달성
-- ✅ **실시간 추론**: Streamlit 웹 데모 및 FastAPI 백엔드 제공
-- ✅ **배포 완료**: HuggingFace Spaces에 배포되어 즉시 사용 가능
-- ✅ **체계적인 실험**: EDA, 전처리, 학습, 평가 파이프라인 구축
+- **두 가지 딥러닝 아키텍처 비교**: CNN vs Vision Transformer
+- **고성능 모델**: Test Accuracy 97% 이상 달성
+- **실시간 추론**: Streamlit 웹 데모 및 FastAPI 백엔드 제공
+- **배포 완료**: HuggingFace Spaces에 배포되어 즉시 사용 가능
+- **체계적인 실험**: EDA, 전처리, 학습, 평가 파이프라인 구축
 
 ### 기술 스택
 - **Deep Learning**: PyTorch, torchvision, transformers
@@ -59,9 +59,7 @@ AI 생성 이미지와 실제 이미지를 구분하는 이진 분류 태스크�
 
 ---
 
-## 🏗️ 시스템 아키텍처
-
-> 💡 **시각적 다이어그램**: 시스템 구조를 더 명확하게 보려면 [시스템 아키텍처 다이어그램](experiments/results/system_architecture.png)을 참조하세요. (향후 추가 예정)
+## 시스템 아키텍처
 
 ### 전체 시스템 구조
 
@@ -232,7 +230,7 @@ Raw Data (70,190 images)
 
 ---
 
-## 📊 모델 & 실험 요약
+## 모델 & 실험 요약
 
 ### 데이터셋
 - **총 데이터**: 70,190개 이미지 (Train: 49,132 / Val: 10,528 / Test: 10,530)
@@ -271,7 +269,7 @@ Raw Data (70,190 images)
 
 ---
 
-## 🔍 Ablation Study 핵심
+## Ablation Study 핵심
 
 ### 주요 실험 결과
 
@@ -290,7 +288,7 @@ Raw Data (70,190 images)
 
 > 📖 **상세 Ablation Study**: [docs/ABLATION_STUDY.md](docs/ABLATION_STUDY.md)
 
-## 🚀 데모 및 배포
+## 데모 및 배포
 
 ### 🌐 HuggingFace Spaces 배포
 
@@ -303,9 +301,9 @@ Raw Data (70,190 images)
 4. 실시간으로 AI 생성 이미지 여부 확인
 
 #### 배포된 기능
-- ✅ CNN 모델 실시간 추론
-- ✅ 확률 분포 시각화
-- ✅ 상세 예측 정보 제공
+- CNN 모델 실시간 추론
+- 확률 분포 시각화
+- 상세 예측 정보 제공
 
 ### 💻 로컬 실행
 
@@ -340,7 +338,7 @@ docker-compose up -d
 
 ---
 
-## 🔧 핵심 기술 설명
+## 핵심 기술 설명
 
 ### 모델 아키텍처
 
@@ -363,7 +361,7 @@ docker-compose up -d
 
 ---
 
-## 🔍 실제 활용 시나리오 (Use Cases)
+## 실제 활용 시나리오 (Use Cases)
 
 ### 1. SNS 플랫폼 AI 콘텐츠 필터링
 **플랫폼**: Instagram, KakaoView, Facebook  
@@ -387,7 +385,7 @@ docker-compose up -d
 
 ---
 
-## 👤 개인 기여도 (Contribution)
+## 개인 기여도 (Contribution)
 
 이 프로젝트는 **100% 개인 프로젝트**로, 모든 작업을 직접 수행했습니다.
 
@@ -399,54 +397,54 @@ docker-compose up -d
   - 프로덕션 수준의 배포 환경 구축
 
 ### 데이터 수집 및 전처리 
-- ✅ **데이터 수집**: 3개 데이터셋 통합 (총 70,190개 이미지)
-- ✅ **데이터 전처리**: Resize, Denoising, Histogram Equalization 구현
-- ✅ **데이터 분할**: Stratified Split으로 클래스 비율 유지하며 Train/Val/Test 분할
-- ✅ **EDA**: 탐색적 데이터 분석 및 시각화
+- **데이터 수집**: 3개 데이터셋 통합 (총 70,190개 이미지)
+- **데이터 전처리**: Resize, Denoising, Histogram Equalization 구현
+- **데이터 분할**: Stratified Split으로 클래스 비율 유지하며 Train/Val/Test 분할
+- **EDA**: 탐색적 데이터 분석 및 시각화
 
 ### 모델 설계 및 실험 
-- ✅ **모델 선택**: CNN (ResNet18) 및 ViT (ViT-Base) 아키텍처 선택 및 구현
-- ✅ **실험 설계**: 하이퍼파라미터 튜닝 전략 수립
-- ✅ **Ablation Study**: 데이터 증강, 전처리, 손실 함수 효과 분석
-- ✅ **하이퍼파라미터 튜닝**: Batch Size, Learning Rate, Optimizer 최적화
+- **모델 선택**: CNN (ResNet18) 및 ViT (ViT-Base) 아키텍처 선택 및 구현
+- **실험 설계**: 하이퍼파라미터 튜닝 전략 수립
+- **Ablation Study**: 데이터 증강, 전처리, 손실 함수 효과 분석
+- **하이퍼파라미터 튜닝**: Batch Size, Learning Rate, Optimizer 최적화
 
 ### 학습 파이프라인 구축 
-- ✅ **학습 코드**: PyTorch 기반 학습 파이프라인 구현
-- ✅ **평가 시스템**: Accuracy, Precision, Recall, F1, Confusion Matrix 구현
-- ✅ **Early Stopping**: 과적합 방지 메커니즘 구현
-- ✅ **체크포인트 관리**: Best/Latest 모델 자동 저장
+- **학습 코드**: PyTorch 기반 학습 파이프라인 구현
+- **평가 시스템**: Accuracy, Precision, Recall, F1, Confusion Matrix 구현
+- **Early Stopping**: 과적합 방지 메커니즘 구현
+- **체크포인트 관리**: Best/Latest 모델 자동 저장
 
 ### 웹 애플리케이션 개발 
-- ✅ **Streamlit UI**: 웹 데모 인터페이스 설계 및 구현
-- ✅ **FastAPI 백엔드**: RESTful API 서버 구축
-- ✅ **프론트엔드-백엔드 연결**: API 통신 및 에러 처리 구현
-- ✅ **사용자 경험**: 이미지 업로드, 결과 시각화, 확률 분포 표시
+- **Streamlit UI**: 웹 데모 인터페이스 설계 및 구현
+- **FastAPI 백엔드**: RESTful API 서버 구축
+- **프론트엔드-백엔드 연결**: API 통신 및 에러 처리 구현
+- **사용자 경험**: 이미지 업로드, 결과 시각화, 확률 분포 표시
 
 ### 배포 및 인프라 
-- ✅ **Docker**: Dockerfile 작성 및 Docker Compose 구성
-- ✅ **HuggingFace Spaces**: 배포 환경 구성 및 배포 수행
-- ✅ **배포 문제 해결**: 403 에러, 파일 시스템 권한 등 이슈 해결
-- ✅ **CI/CD**: GitHub Actions 워크플로우 설계 (향후 구현 예정)
+- **Docker**: Dockerfile 작성 및 Docker Compose 구성
+- **HuggingFace Spaces**: 배포 환경 구성 및 배포 수행
+- **배포 문제 해결**: 403 에러, 파일 시스템 권한 등 이슈 해결
+- **CI/CD**: GitHub Actions 워크플로우 설계 (향후 구현 예정)
 
 ### 문서화 
-- ✅ **README**: 문서 직접 작성 후 LLM 정리 도움 받음 (초안 작성 및 구조 설계는 본인 수행)
-- ✅ **실험 보고서**: 상세한 실험 분석 및 결과 해석
-- ✅ **코드 주석**: 주요 함수 및 클래스에 한국어 주석 추가
-- ✅ **배포 가이드**: Docker, HuggingFace Spaces 배포 가이드 작성
+- **README**: 문서 직접 작성 후 LLM 정리 도움 받음 (초안 작성 및 구조 설계는 본인 수행)
+- **실험 보고서**: 상세한 실험 분석 및 결과 해석
+- **코드 주석**: 주요 함수 및 클래스에 한국어 주석 추가
+- **배포 가이드**: Docker, HuggingFace Spaces 배포 가이드 작성
 
 ### 추가 기능 개발
-- ✅ **배치 추론**: 여러 이미지 동시 처리 기능 구현
-- ✅ **모델 최적화**: 양자화, ONNX 변환 연구 및 구현
-- ✅ **Explainability**: Grad-CAM, Attention Map 시각화 준비 (향후 구현 예정)
+- **배치 추론**: 여러 이미지 동시 처리 기능 구현
+- **모델 최적화**: 양자화, ONNX 변환 연구 및 구현
+- **Explainability**: Grad-CAM, Attention Map 시각화 준비 (향후 구현 예정)
 
 ### 기술 스택 선택 및 학습
-- ✅ **프레임워크 선택**: PyTorch, Streamlit, FastAPI 선택 및 학습
-- ✅ **모델 아키텍처 이해**: ResNet, Vision Transformer 이론 학습 및 구현
-- ✅ **배포 플랫폼 학습**: Docker, HuggingFace Spaces 사용법 학습
+- **프레임워크 선택**: PyTorch, Streamlit, FastAPI 선택 및 학습
+- **모델 아키텍처 이해**: ResNet, Vision Transformer 이론 학습 및 구현
+- **배포 플랫폼 학습**: Docker, HuggingFace Spaces 사용법 학습
 
 ---
 
-## 🎯 이 프로젝트가 증명하는 역량
+## 이 프로젝트가 증명하는 역량
 
 ### 1. End-to-End AI 개발 역량
 **증명 내용**:
@@ -530,7 +528,7 @@ docker-compose up -d
 
 ---
 
-## 🛠️ 설치 및 실행
+## 설치 및 실행
 
 ### 요구사항
 - Python 3.11+
@@ -581,7 +579,7 @@ python examples/batch_inference.py --input_dir path/to/images/
 
 ---
 
-## 📁 프로젝트 구조
+## 프로젝트 구조
 
 ```
 Ai-image-detector/
@@ -640,27 +638,19 @@ Ai-image-detector/
 
 ---
 
-## 📄 라이선스
+## 라이선스
 
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
 
 ---
 
-## 👤 작성자
+## 작성자
 
 **yanggangyi**
 
 - GitHub: [@yanggangyiplus](https://github.com/yanggangyiplus)
 - HuggingFace: [@yanggangyi](https://huggingface.co/yanggangyi)
 
----
-
-## 🙏 감사의 말
-
-- PyTorch 팀
-- HuggingFace 팀
-- Streamlit 팀
-- 오픈소스 커뮤니티
 
 ---
 
