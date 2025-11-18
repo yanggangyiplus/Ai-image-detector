@@ -240,7 +240,7 @@ env/
 *.log
 experiments/logs/*.log
 
-# Large result files
-experiments/results/*.png
+# Large result files (그래프는 제외 - README에 포함 필요)
 experiments/results/*.jpg
-experiments/results/*.json
+# experiments/results/*.png  # 그래프는 포함
+# experiments/results/*.json  # 메타데이터는 포함
