@@ -205,3 +205,42 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project specific
+.DS_Store
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Large data files
+data/raw/
+data/processed/
+data/train/
+data/val/
+data/test/
+
+# Keep metadata files
+!data/class_map.json
+!data/metadata.json
+
+# Keep checkpoints directory structure but ignore large files
+experiments/checkpoints/*.pth
+experiments/checkpoints/*.pt
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+experiments/logs/*.log
+
+# Large result files
+experiments/results/*.png
+experiments/results/*.jpg
+experiments/results/*.json

@@ -1,0 +1,45 @@
+# ViT 모델 학습 설정
+
+# 모델 설정
+model:
+  name: "ViTClassifier"
+  num_classes: 2
+  model_name: "google/vit-base-patch16-224"
+  pretrained: true
+
+# 데이터 설정
+data:
+  data_dir: "data"
+  image_size: 224
+  batch_size: 16
+  num_workers: 4
+
+# 학습 설정
+training:
+  num_epochs: 30
+  learning_rate: 0.00001
+  weight_decay: 0.01
+  optimizer: "AdamW"
+  scheduler: "CosineAnnealingLR"
+  scheduler_T_max: 30
+
+# 손실 함수 설정
+loss:
+  name: "CrossEntropyLoss"
+
+# 검증 설정
+validation:
+  val_ratio: 0.15
+  early_stopping_patience: 5
+
+# 저장 설정
+save:
+  checkpoint_dir: "experiments/checkpoints"
+  save_best: true
+  save_last: true
+
+# 기타 설정
+device: "cuda"
+seed: 42
+log_dir: "experiments/logs"
+

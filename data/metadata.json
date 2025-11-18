@@ -1,0 +1,10 @@
+{
+  "dataset_name": "CIFAKE",
+  "description": "AI 생성 이미지와 실제 이미지 분류 데이터셋",
+  "num_classes": 2,
+  "classes": ["real", "fake"],
+  "image_size": [224, 224],
+  "created_date": "2024-01-01",
+  "version": "1.0"
+}
+

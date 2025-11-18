@@ -1,0 +1,31 @@
+# 평가/추론 설정
+
+# 모델 설정
+model:
+  checkpoint_path: "experiments/checkpoints/best_model.pth"
+  model_type: "ResNetClassifier"  # 또는 "ViTClassifier"
+  num_classes: 2
+
+# 데이터 설정
+data:
+  test_dir: "data/test"
+  image_size: 224
+  batch_size: 32
+  num_workers: 4
+
+# 클래스 설정
+classes:
+  - "real"
+  - "fake"
+
+# 출력 설정
+output:
+  results_dir: "experiments/results"
+  save_predictions: true
+  save_confusion_matrix: true
+  save_classification_report: true
+
+# 기타 설정
+device: "cuda"
+seed: 42
+

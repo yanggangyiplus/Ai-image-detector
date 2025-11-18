@@ -1,0 +1,76 @@
+# Docker 빌드 시 제외할 파일/디렉토리
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 데이터 (체크포인트만 포함)
+data/raw/
+data/processed/
+data/train/
+data/val/
+data/test/
+*.jpg
+*.png
+*.jpeg
+*.bmp
+*.tiff
+
+# 실험 결과 (필요시 제외)
+experiments/logs/
+experiments/results/
+experiments/reports/
+
+# 노트북
+notebooks/
+*.ipynb
+*.ipynb_checkpoints
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# 문서
+*.md
+!README.md
+docs/
+
+# 기타
+.DS_Store
+*.log
+*.tmp
+*.cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# 배포 관련
+deployment/
+*.sh
+!run_api.sh
+!run_streamlit.sh
+
+# 설정 파일 (선택적)
+configs/
+!configs/*.yaml
+
