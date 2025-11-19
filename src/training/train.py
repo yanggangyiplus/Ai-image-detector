@@ -337,7 +337,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
         if is_best:
             best_path = save_dir / f'{model_name}_best.pth'
             torch.save(checkpoint, best_path)
-            logger.info(f"✅ Best model 저장: {best_path} "
+            logger.info(f"Best model 저장: {best_path} "
                        f"(Val Loss: {best_val_loss:.4f}, Val Acc: {best_val_accuracy:.4f})")
         
         # Early Stopping 체크
@@ -353,7 +353,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
     history_path = log_dir / f'{model_name}_history.json'
     with open(history_path, 'w', encoding='utf-8') as f:
         json.dump(history, f, indent=2, ensure_ascii=False)
-    logger.info(f"\n✅ 학습 히스토리 저장: {history_path}")
+    logger.info(f"\n학습 히스토리 저장: {history_path}")
     
     logger.info("\n" + "=" * 70)
     logger.info("학습 완료!")

@@ -158,7 +158,7 @@ def load_model_for_inference(checkpoint_path, model_type='cnn', model_name='resn
     model = model.to(device)
     model.eval()
     
-    print(f"✅ 모델 로드 완료: {checkpoint_path}")
+    print(f"모델 로드 완료: {checkpoint_path}")
     print(f"   모델 타입: {model_type.upper()}")
     print(f"   모델 이름: {model_name}")
     print(f"   Best Epoch: {checkpoint.get('epoch', 'N/A')}")
@@ -213,5 +213,5 @@ def save_prediction_result(result, save_path):
     with open(save_path, 'w', encoding='utf-8') as f:
         json.dump(result_to_save, f, indent=2, ensure_ascii=False)
     
-    print(f"✅ 예측 결과 저장: {save_path}")
+    print(f"예측 결과 저장: {save_path}")
 

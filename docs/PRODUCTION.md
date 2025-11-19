@@ -239,3 +239,4 @@ async def batch_predict(images: List[Image]):
     return results
 ```
 
+

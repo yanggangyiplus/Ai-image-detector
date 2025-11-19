@@ -72,7 +72,7 @@ def create_optimizer(model, optimizer_name='adamw', learning_rate=1e-4,
             f"지원 옵티마이저: ['adamw', 'adam', 'sgd']"
         )
     
-    print(f"✅ {optimizer_name.upper()} 옵티마이저 생성 완료")
+    print(f"{optimizer_name.upper()} 옵티마이저 생성 완료")
     print(f"   학습률: {learning_rate}")
     print(f"   가중치 감쇠: {weight_decay}")
     print(f"   학습 가능한 파라미터 수: {sum(p.numel() for p in params):,}")
@@ -110,7 +110,7 @@ def create_scheduler(optimizer, scheduler_name='cosine_annealing',
             T_max=num_epochs,
             eta_min=eta_min
         )
-        print(f"✅ Cosine Annealing 스케줄러 생성 완료")
+        print(f"Cosine Annealing 스케줄러 생성 완료")
         print(f"   총 에포크: {num_epochs}")
         print(f"   최소 학습률: {eta_min}")
     
@@ -130,7 +130,7 @@ def create_scheduler(optimizer, scheduler_name='cosine_annealing',
             threshold=threshold,
             min_lr=min_lr
         )
-        print(f"✅ ReduceLROnPlateau 스케줄러 생성 완료")
+        print(f"ReduceLROnPlateau 스케줄러 생성 완료")
         print(f"   모드: {mode}")
         print(f"   감소 비율: {factor}")
         print(f"   인내심: {patience} 에포크")

@@ -46,7 +46,7 @@ def get_loss_function(loss_name='cross_entropy', num_classes=2, **kwargs):
             f"지원 함수: ['cross_entropy', 'focal', 'label_smoothing']"
         )
     
-    print(f"✅ 손실 함수 생성 완료: {loss_name}")
+    print(f"손실 함수 생성 완료: {loss_name}")
     return criterion
 
 

@@ -153,7 +153,7 @@ checkpoint = torch.load(best_model_path, map_location=CONFIG['device'], weights_
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
-print(f"✅ Best 모델 로드 완료 (Epoch {checkpoint['epoch']})")
+print(f"Best 모델 로드 완료 (Epoch {checkpoint['epoch']})")
 
 test_results = evaluate_model(
     model,
@@ -203,7 +203,7 @@ cm = test_results['metrics']['confusion_matrix']
 plot_confusion_matrix(cm, CONFIG['class_names'], save_path=RESULTS_DIR / f'{model_name}_confusion_matrix.png')
 
 print(f"\n{'='*70}")
-print(f"✅ 모든 작업 완료!")
+print(f"모든 작업 완료!")
 print(f"{'='*70}")
 print(f"\n저장된 파일:")
 print(f"  - 체크포인트: {CHECKPOINT_DIR / f'{model_name}_best.pth'}")

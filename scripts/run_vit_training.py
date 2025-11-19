@@ -102,9 +102,9 @@ train_loader = DataLoader(train_dataset, batch_size=CONFIG['batch_size'], shuffl
 val_loader = DataLoader(val_dataset, batch_size=CONFIG['batch_size'], shuffle=False, num_workers=0)
 test_loader = DataLoader(test_dataset, batch_size=CONFIG['batch_size'], shuffle=False, num_workers=0)
 
-print(f"✅ 학습 데이터셋: {len(train_dataset)}개 샘플")
-print(f"✅ 검증 데이터셋: {len(val_dataset)}개 샘플")
-print(f"✅ 테스트 데이터셋: {len(test_dataset)}개 샘플\n")
+print(f"학습 데이터셋: {len(train_dataset)}개 샘플")
+print(f"검증 데이터셋: {len(val_dataset)}개 샘플")
+print(f"테스트 데이터셋: {len(test_dataset)}개 샘플\n")
 
 # ViT 모델 생성
 print("ViT 모델 생성 중...")
@@ -176,7 +176,7 @@ model.eval()
 
 val_metrics = checkpoint.get('val_metrics', {})
 best_epoch = checkpoint.get('epoch', 0)
-print(f"✅ Best 모델 로드 완료 (Epoch {best_epoch})")
+print(f"Best 모델 로드 완료 (Epoch {best_epoch})")
 if val_metrics:
     print(f"   Best Val Loss: {val_metrics.get('loss', 'N/A'):.4f}")
     print(f"   Best Val Accuracy: {val_metrics.get('accuracy', 'N/A'):.4f}\n")
@@ -224,7 +224,7 @@ print_metrics(test_results, class_names=CONFIG['class_names'])
 Path('experiments/results').mkdir(parents=True, exist_ok=True)
 plot_confusion_matrix(metrics['confusion_matrix'], class_names=CONFIG['class_names'], 
                       save_path=f'experiments/results/{model_name}_test_confusion_matrix.png')
-print(f"\n✅ Confusion Matrix 저장: experiments/results/{model_name}_test_confusion_matrix.png")
+print(f"\nConfusion Matrix 저장: experiments/results/{model_name}_test_confusion_matrix.png")
 
-print("\n✅ ViT 모델 Fine-tuning 및 평가 완료!")
+print("\nViT 모델 Fine-tuning 및 평가 완료!")
 

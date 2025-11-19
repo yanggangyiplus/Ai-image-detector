@@ -1,7 +1,7 @@
 #!/bin/bash
 # FastAPI 서버 실행 스크립트
 
-echo "🚀 FastAPI 서버 시작..."
+echo "FastAPI 서버 시작..."
 echo ""
 
 # 프로젝트 루트로 이동

@@ -100,7 +100,7 @@ def batch_predict(model, image_paths, device='cpu', batch_size=32, class_names=N
     if len(image_paths) == 0:
         raise ValueError("처리할 이미지가 없습니다.")
     
-    print(f"📊 총 {len(image_paths)}개의 이미지 처리 시작...")
+    print(f"총 {len(image_paths)}개의 이미지 처리 시작...")
     
     # 클래스 이름 처리
     if class_names is None:
@@ -152,7 +152,7 @@ def batch_predict(model, image_paths, device='cpu', batch_size=32, class_names=N
                 }
                 all_results.append(result)
     
-    print(f"✅ 총 {len(all_results)}개의 이미지 처리 완료")
+    print(f"총 {len(all_results)}개의 이미지 처리 완료")
     
     return all_results
 
@@ -172,7 +172,7 @@ def save_batch_results(results, save_path, format='json'):
     if format.lower() == 'json':
         with open(save_path, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
-        print(f"✅ JSON 형식으로 저장: {save_path}")
+        print(f"JSON 형식으로 저장: {save_path}")
     
     elif format.lower() == 'csv':
         import pandas as pd
@@ -194,7 +194,7 @@ def save_batch_results(results, save_path, format='json'):
         
         df = pd.DataFrame(data)
         df.to_csv(save_path, index=False, encoding='utf-8-sig')
-        print(f"✅ CSV 형식으로 저장: {save_path}")
+        print(f"CSV 형식으로 저장: {save_path}")
     
     else:
         raise ValueError(f"지원하지 않는 형식: {format}")
@@ -216,7 +216,7 @@ def print_batch_summary(results, class_names=None):
     real_count = total - ai_count
     
     print("\n" + "=" * 60)
-    print("📊 배치 추론 결과 요약")
+    print("배치 추론 결과 요약")
     print("=" * 60)
     print(f"총 처리된 이미지: {total}개")
     print(f"\n클래스별 분포:")

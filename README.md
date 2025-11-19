@@ -20,7 +20,7 @@
 - [실제 활용 시나리오 (Use Cases)](#-실제-활용-시나리오-use-cases)
 - [데모 및 배포](#-데모-및-배포)
 - [개인 기여도 (Contribution)](#-개인-기여도-contribution)
-- [이 프로젝트가 증명하는 역량](#-이-프로젝트가-증명하는-역량)
+- [역량](#역량)
 - [설치 및 실행](#-설치-및-실행)
 - [상세 문서](#-상세-문서)
 
@@ -275,9 +275,9 @@ Raw Data (70,190 images)
 
 | 실험 번호      | 데이터 증강 | Histogram Equalization | Weighted Loss | Test Accuracy | 개선 효과 |
 |--------------|----------|------------------------|---------------|---------------|---------|
-| **Baseline** |    ❌    |           ❌           |       ❌       |     94.2%     |    -    |
-| **Exp 2**    |    ❌    |           ✅           |       ❌       |     95.8%     |  +1.6%p |
-| **Final**    |    ✅    |           ✅           |       ✅       |   **96.32%**  |**+2.12%p**|
+| **Baseline** |    -    |           -           |       -       |     94.2%     |    -    |
+| **Exp 2**    |    -    |           O           |       -       |     95.8%     |  +1.6%p |
+| **Final**    |    O    |           O           |       O       |   **96.32%**  |**+2.12%p**|
 
 ### 핵심 발견사항
 
@@ -286,11 +286,11 @@ Raw Data (70,190 images)
 - **Weighted Loss**: 클래스 불균형 대응 (+0.6%p)
 - **시너지 효과**: 개별 요소의 합보다 큰 개선 (+2.12%p)
 
-> 📖 **상세 Ablation Study**: [docs/ABLATION_STUDY.md](docs/ABLATION_STUDY.md)
+상세 Ablation Study는 [docs/ABLATION_STUDY.md](docs/ABLATION_STUDY.md)를 참조하세요.
 
 ## 데모 및 배포
 
-### 🌐 HuggingFace Spaces 배포
+### HuggingFace Spaces 배포
 
 **배포 URL**: [https://huggingface.co/spaces/yanggangyi/Ai-image-detector](https://huggingface.co/spaces/yanggangyi/Ai-image-detector)
 
@@ -305,7 +305,7 @@ Raw Data (70,190 images)
 - 확률 분포 시각화
 - 상세 예측 정보 제공
 
-### 💻 로컬 실행
+### 로컬 실행
 
 #### Streamlit 웹 데모
 ```bash
@@ -325,7 +325,7 @@ bash scripts/run_api.sh
 uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### 🐳 Docker 배포
+### Docker 배포
 
 ```bash
 cd deployment/docker
@@ -334,7 +334,7 @@ docker-compose up -d
 
 자세한 배포 방법은 [deployment/DEPLOYMENT.md](deployment/DEPLOYMENT.md)를 참조하세요.
 
-> 📖 **프로덕션 배포 상세**: [docs/PRODUCTION.md](docs/PRODUCTION.md) (Kubernetes, MLflow, CI/CD, 모니터링 등)
+프로덕션 배포 상세는 [docs/PRODUCTION.md](docs/PRODUCTION.md)를 참조하세요.
 
 ---
 
@@ -357,7 +357,7 @@ docker-compose up -d
 3. **Histogram Equalization**: 다양한 조명 조건 대응 (+1.6%p 성능 향상)
 4. **Weighted Loss**: 클래스 불균형 해결 (AI F1 +2.1%p 향상)
 
-> 📖 **상세 설명**: [모델 선택 이유 상세](experiments/reports/experiment_report.md#모델-성능-분석-어떤-모델이-왜-좋은가)
+상세 설명은 [실험 보고서](experiments/reports/experiment_report.md)를 참조하세요.
 
 ---
 
@@ -369,7 +369,7 @@ docker-compose up -d
 **효과**: 사용자 투명성 향상, 가짜 뉴스/정보 확산 방지
 
 ### 2. 쇼핑 플랫폼 제품 이미지 진위 판별
-**플랫폼**: 무신사, 네이버 쇼핑, 쿠팡  
+**플랫폼**: 쇼핑몰, 전자상거래 사이트  
 **해결책**: 상품 등록 시 이미지 자동 검증, AI 생성 이미지 사용 시 경고 또는 거부  
 **효과**: 사기 거래 방지, 소비자 보호 강화
 
@@ -444,87 +444,47 @@ docker-compose up -d
 
 ---
 
-## 이 프로젝트가 증명하는 역량
+## 역량
 
 ### 1. End-to-End AI 개발 역량
-**증명 내용**:
 - 데이터 수집부터 배포까지 전체 파이프라인 구축
 - EDA → 전처리 → 모델링 → 실험 → 평가 → 배포 전 과정 수행
 - 실제 서비스 가능한 수준의 완성도
 
-**대기업에서의 가치**:
-- AI 프로젝트를 처음부터 끝까지 책임질 수 있는 역량
-- 데이터부터 배포까지 전체 프로세스 이해
-
 ### 2. ML 실험 설계 능력
-**증명 내용**:
 - 체계적인 Ablation Study 설계 및 수행
 - Design Decision 논리적 근거 제시
 - 클래스 불균형 문제 해결 (Weighted Loss, Stratified Split)
 - 하이퍼파라미터 최적화 전략 수립
-
-**대기업에서의 가치**:
-- 실험 설계 및 결과 해석 능력
-- 문제 해결을 위한 체계적 접근
 - 재현 가능한 실험 환경 구축
 
 ### 3. 시스템 설계 능력
-**증명 내용**:
 - 전체 시스템 아키텍처 설계
 - RESTful API 설계 및 구현
 - Docker 기반 컨테이너화
 - 웹 인터페이스 설계 및 구현
 
-**대기업에서의 가치**:
-- 시스템 아키텍처 설계 능력
-- 백엔드/프론트엔드 개발 역량
-- 인프라 구성 및 배포 경험
-
 ### 4. 문서화 능력
-**증명 내용**:
-- 대기업 수준의 구조적 README 작성
+- 구조적 README 작성
 - 상세한 실험 보고서 작성
 - 코드 주석 및 문서화
 - 배포 가이드 작성
 
-**대기업에서의 가치**:
-- 기술 문서 작성 능력
-- 지식 공유 및 전달 능력
-- 프로젝트 관리 역량
-
 ### 5. 프로덕션 고려 역량
-**증명 내용**:
 - 모델 최적화 (양자화, ONNX 변환)
 - Inference Latency 개선
 - 모델 한계 및 위험 요소 분석
 - 보안 및 윤리 고려
 
-**대기업에서의 가치**:
-- 실제 서비스 운영 고려 능력
-- 성능 최적화 경험
-- 리스크 관리 및 대응 능력
-
 ### 6. 문제 해결 능력
-**증명 내용**:
 - 배포 과정에서 발생한 문제 해결 (403 에러, 파일 시스템 권한)
 - 환경별 이슈 해결 (macOS multiprocessing, Docker 빌드)
 - 모델 용량 제한 대응 (HuggingFace Spaces 1GB 제한)
 
-**대기업에서의 가치**:
-- 문제 분석 및 해결 능력
-- 다양한 환경에서의 적응력
-- 제약 조건 내에서 최적화 능력
-
 ### 7. 지속적 학습 및 개선
-**증명 내용**:
 - 최신 기술 스택 학습 (Vision Transformer)
 - 모델 최적화 기법 연구 (Quantization, ONNX)
 - 배포 플랫폼 학습 (HuggingFace Spaces, Docker)
-
-**대기업에서의 가치**:
-- 빠른 학습 능력
-- 기술 트렌드 파악 및 적용
-- 지속적 개선 의지
 
 ---
 

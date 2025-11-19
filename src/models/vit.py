@@ -52,7 +52,7 @@ class ViTBaseClassifier(nn.Module):
                 for param in self.vit.encoder.layer[i].parameters():
                     param.requires_grad = False
             
-            print(f"✅ {freeze_layers}개 레이어를 고정했습니다 (Fine-tuning 모드)")
+            print(f"{freeze_layers}개 레이어를 고정했습니다 (Fine-tuning 모드)")
     
     def forward(self, x):
         """

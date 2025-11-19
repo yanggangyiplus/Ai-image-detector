@@ -1,7 +1,7 @@
 #!/bin/bash
 # Streamlit 웹 데모 실행 스크립트
 
-echo "🚀 Streamlit 웹 데모 시작..."
+echo "Streamlit 웹 데모 시작..."
 echo ""
 
 # 프로젝트 루트로 이동

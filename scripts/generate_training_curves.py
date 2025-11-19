@@ -50,7 +50,7 @@ def plot_training_curves(model_name, history, save_path):
     
     plt.tight_layout()
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
-    print(f"✅ 그래프 저장: {save_path}")
+    print(f"그래프 저장: {save_path}")
     plt.close()
 
 def plot_comparison_curves(cnn_history, vit_history, save_path):
@@ -84,7 +84,7 @@ def plot_comparison_curves(cnn_history, vit_history, save_path):
     
     plt.tight_layout()
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
-    print(f"✅ 비교 그래프 저장: {save_path}")
+    print(f"비교 그래프 저장: {save_path}")
     plt.close()
 
 def main():
@@ -110,8 +110,9 @@ def main():
         plot_comparison_curves(cnn_history, vit_history,
                               RESULTS_DIR / "model_comparison_curves.png")
     
-    print("\n✅ 모든 그래프 생성 완료!")
+    print("\n모든 그래프 생성 완료!")
 
 if __name__ == "__main__":
     main()
+
 

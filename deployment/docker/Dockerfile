@@ -1,5 +1,4 @@
 # AI Image Detector - Multi-stage Dockerfile
-# 포트폴리오용 최적화된 Docker 이미지
 
 # Stage 1: Base image with Python
 FROM python:3.11-slim as base

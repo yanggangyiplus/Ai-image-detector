@@ -47,7 +47,7 @@ def create_cnn_model(model_name='resnet18', num_classes=2, pretrained=True, **kw
     model_class = model_registry[model_name.lower()]
     model = model_class(num_classes=num_classes, pretrained=pretrained, **kwargs)
     
-    print(f"✅ {model_name} 모델 생성 완료 (클래스 수: {num_classes}, 사전훈련: {pretrained})")
+    print(f"{model_name} 모델 생성 완료 (클래스 수: {num_classes}, 사전훈련: {pretrained})")
     return model
 
 
@@ -91,7 +91,7 @@ def create_vit_model(model_name='vit_base', num_classes=2, pretrained=True,
             f"지원 모델: ['vit_base', 'vit_for_classification']"
         )
     
-    print(f"✅ {model_name} 모델 생성 완료 (클래스 수: {num_classes}, 사전훈련: {pretrained})")
+    print(f"{model_name} 모델 생성 완료 (클래스 수: {num_classes}, 사전훈련: {pretrained})")
     return model
 
 
@@ -127,7 +127,7 @@ def save_model(model, save_path, epoch=None, optimizer=None, metrics=None,
     save_path.parent.mkdir(parents=True, exist_ok=True)
     
     torch.save(checkpoint, save_path)
-    print(f"✅ 모델 저장 완료: {save_path}")
+    print(f"모델 저장 완료: {save_path}")
 
 
 def load_model(model, load_path, device='cpu', strict=True):
@@ -155,7 +155,7 @@ def load_model(model, load_path, device='cpu', strict=True):
     else:
         model.load_state_dict(checkpoint['model_state_dict'], strict=False)
     
-    print(f"✅ 모델 로드 완료: {load_path}")
+    print(f"모델 로드 완료: {load_path}")
     if 'epoch' in checkpoint:
         print(f"   에포크: {checkpoint['epoch']}")
     if 'metrics' in checkpoint:
