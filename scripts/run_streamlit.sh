@@ -10,5 +10,5 @@ PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_ROOT"
 
 # Streamlit 실행
-streamlit run app/web_demo.py --server.port 8501
+streamlit run app/web/web_demo.py --server.port 8501
 
